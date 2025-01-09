@@ -39,8 +39,8 @@ import pandas as pd
 # -------------------------------
 # 1. Load Shapefile
 # -------------------------------
-shapefile_path = "C:/Users/Lutfi/Desktop/Forest Fire Project/Dashboard_Project/shapefile/Commune_BR_13.shp"
-# shapefile_path = "/shapefile/Commune_BR_13.shp"
+#shapefile_path = "C:/Users/Lutfi/Desktop/Forest Fire Project/Dashboard_Project/shapefile/Commune_BR_13.shp"
+shapefile_path = "shapefile/Commune_BR_13.shp"
 gdf = gpd.read_file(shapefile_path)
 
 print("✅ Shapefile loaded successfully.")
@@ -127,6 +127,7 @@ print("✅ CRS reprojected to EPSG:4326.")
 # -------------------------------
 # 7. Export to GeoJSON
 # -------------------------------
+#geojson_file_path = "C:/Users/Lutfi/Desktop/Forest Fire Project/Dashboard_Project/geojson/all_communes.geojson"
 geojson_file_path = "C:/Users/Lutfi/Desktop/Forest Fire Project/Dashboard_Project/geojson/all_communes.geojson"
 merged.to_file(geojson_file_path, driver='GeoJSON')
 
