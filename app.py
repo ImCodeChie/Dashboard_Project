@@ -157,7 +157,7 @@ server = app.server
 from flask import send_from_directory
 # Set the path to the directory containing the HTML file
 #html_file_directory = r'C:\Users\Lutfi\Desktop\Forest Fire Project\Dashboard_Project\qgis2web_2024_11_06-12_39_04_012529'
-html_file_directory = r'C:\Users\Lutfi\Desktop\Forest Fire Project\Dashboard_Project\qgis2web_2024_11_06-12_39_04_012529'
+html_file_directory = r'qgis2web_2024_11_06-12_39_04_012529'
 
 # Flask route to serve the HTML file
 @app.server.route('/html/<path:path>')
