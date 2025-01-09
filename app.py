@@ -128,7 +128,7 @@ print("✅ CRS reprojected to EPSG:4326.")
 # 7. Export to GeoJSON
 # -------------------------------
 #geojson_file_path = "C:/Users/Lutfi/Desktop/Forest Fire Project/Dashboard_Project/geojson/all_communes.geojson"
-geojson_file_path = "C:/Users/Lutfi/Desktop/Forest Fire Project/Dashboard_Project/geojson/all_communes.geojson"
+geojson_file_path = "geojson/all_communes.geojson"
 merged.to_file(geojson_file_path, driver='GeoJSON')
 
 print(f"✅ GeoJSON successfully created at {geojson_file_path}")
@@ -156,6 +156,7 @@ server = app.server
 
 from flask import send_from_directory
 # Set the path to the directory containing the HTML file
+#html_file_directory = r'C:\Users\Lutfi\Desktop\Forest Fire Project\Dashboard_Project\qgis2web_2024_11_06-12_39_04_012529'
 html_file_directory = r'C:\Users\Lutfi\Desktop\Forest Fire Project\Dashboard_Project\qgis2web_2024_11_06-12_39_04_012529'
 
 # Flask route to serve the HTML file
