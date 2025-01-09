@@ -5,3 +5,4 @@ plotly
 geopandas
 dash_bootstrap_components
 gunicorn
+unidecode
