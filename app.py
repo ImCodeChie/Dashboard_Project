@@ -101,7 +101,8 @@ merged = merged.to_crs(epsg=4326)
 # -------------------------------
 # Export to GeoJSON
 # -------------------------------
-geojson_file_path = "C:/Users/Lutfi/Desktop/Forest Fire Project/Dashboard_Project/geojson/all_communes.geojson"
+#geojson_file_path = "C:/Users/Lutfi/Desktop/Forest Fire Project/Dashboard_Project/geojson/all_communes.geojson"
+geojson_file_path = "geojson/all_communes.geojson"
 merged.to_file(geojson_file_path, driver='GeoJSON')
 
 # print(f"GeoJSON successfully created at {geojson_file_path}")
