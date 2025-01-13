@@ -38,7 +38,7 @@ df = df.dropna(axis=1, how='all')
 # --- 2. Load Shapefile ---
 
 #shapefile_path = "C:/Users/Lutfi/Desktop/Forest Fire Project/Dashboard_Project/shapefile/Commune_BR_13.shp"
-shapefile_path = "/shapefile/Commune_BR_13.shp"
+shapefile_path = "shapefile/Commune_BR_13.shp"
 gdf = gpd.read_file(shapefile_path)
 gdf.columns = gdf.columns.str.strip()
 gdf['INSEE_COM'] = gdf['INSEE_COM'].astype(str).str.strip()
