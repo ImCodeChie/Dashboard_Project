@@ -7,7 +7,7 @@ This repository contains the **Forest Fire Analytical Dashboard**, a comprehensi
 ## 🎥 Demo
 Click on the link below to see a short video of the dashboard:
 ```markdown
-[![Watch the demo](https://vumbnail.com/1046434071.jpg)](https://vimeo.com/1046434071)
+https://drive.google.com/file/d/1ORp9lyQBh5qhIiAkhT1Z_NaMdlO4Baqe/view?usp=drive_link
 
 
 ```
