@@ -228,7 +228,7 @@ app.run_server(debug=True, port=8050)
 ```
 The app runs on port 8050, and you can access it locally in your browser.
 
-
+---
 
 ## 🧑‍💻 Author and Acknowledgment
 This project was developed as part of the Geovisualization course at University of Aix-Marseille. The authors would like to acknowledge:
