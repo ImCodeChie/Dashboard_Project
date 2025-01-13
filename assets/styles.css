@@ -1,0 +1,743 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* App Title */
+#app-title {
+    text-align: left;
+    color: #002855;
+    font-size: 26px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Main Sidebar */
+#main-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 265px;
+    background-color: #002855;
+    color: #fff;
+    padding: 20px;
+    z-index: 1000;
+    transition: 0.3s ease-in-out;
+    /*overflow: auto;*/
+}
+
+#main-sidebar h1 {
+    color: #fff;
+    font-size: 43px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Padding between Dropdowns and Labels */
+.sidebar-label, .dropdown {
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.dropdown {
+    width: 100%;
+    color: hsl(0, 5%, 8%);
+}
+
+#main-sidebar .nav {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+#main-sidebar .nav-link {
+    color: #ddf;
+    font-size: 16px;
+    padding: 10px 15px;
+    margin-bottom: 0px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+#main-sidebar .nav-link.active {
+    background-color: #0056b3;
+}
+
+#main-sidebar .nav-link:hover {
+    background-color: #003f7f;
+}
+
+/* Hidden Sidebar */
+#hidden-sidebar {
+    position: fixed;
+    top: 0;
+    left: -265px;
+    width: 295px;
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    z-index: 999;
+    transition: left 0.3s ease;
+    overflow: auto;
+}
+
+/* Toggle Button */
+#toggle-sidebar {
+    position: fixed;
+    top: 50%;
+    left: 245px;
+    transform: translateY(-50%);
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    z-index: 1002;
+    cursor: pointer;
+}
+
+#hidden-sidebar h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#hidden-sidebar p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Sidebar Logo */
+#main-sidebar img {
+    height: 70px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Footer Section */
+#main-sidebar p {
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    #main-sidebar {
+        width: 265px;
+
+    }
+
+    .page-content {
+        margin-left: 265px;
+    }
+
+    #toggle-sidebar {
+        left: 265px;
+    }
+
+    #hidden-sidebar {
+        width: 265px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #main-sidebar {
+        width: 150px;
+    }
+
+    .page-content {
+        margin-left: 150px;
+    }
+
+    #toggle-sidebar {
+        left: 150px;
+    }
+
+    #hidden-sidebar {
+        width: 150px;
+    }
+
+    #main-sidebar h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    #main-sidebar img {
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #main-sidebar {
+        display: none;
+    }
+
+    .page-content {
+        margin-left: 0;
+    }
+
+    #toggle-sidebar {
+        left: 0;
+    }
+
+    #hidden-sidebar {
+        width: 100%;
+    }
+
+    #main-sidebar h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    #main-sidebar img {
+        height: 50px;
+    }
+
+    #main-sidebar p {
+        font-size: 10px;
+    }
+}
+
+/* Main Content ------------------------------------------------------------------------------------------------*/
+#page-content {
+    margin-left: 265px;
+    padding: 0px;
+    overflow: hidden;
+    height: 100%;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* Title Section Styling */
+.title-container {
+    background-color: #bd4343; 
+    width: calc(100% - 265px); 
+    position: fixed; 
+    top: 0; 
+    left: 265px; 
+    z-index: 2; 
+    padding: 10px; 
+    box-sizing: border-box; 
+    overflow: hidden; 
+}
+
+/* Title Text Styling */
+.title-container h1 {
+    text-align: left;
+    color: #002855; 
+    font-size: 26px; 
+    font-weight: bold; 
+    margin: 0; 
+    box-sizing: border-box; 
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .title-container {
+        padding-left: 20px; 
+    }
+
+    .title-container h1 {
+        font-size: 20px; 
+    }
+}
+
+
+/* Sidebar Toggle Handling */
+.sidebar-open #page-content {
+    margin-left: 265px;
+}
+
+.sidebar-closed #page-content {
+    margin-left: 0;
+}
+
+.sidebar-open .title-container {
+    width: calc(100% - 265px);
+    left: 265px;
+}
+
+.sidebar-closed .title-container {
+    width: 100%;
+    left: 0;
+}
+
+
+/* Home Layout */
+.home-layout {
+    height: 100vh;
+    width: 100%;
+    background: url('/assets/wildfire.webp') center/cover no-repeat;
+    padding-top: 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow: auto;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%; 
+    margin-top: 10px;
+    padding: 20px;
+}
+
+
+/* Data Summaries Section Styling */
+.summary-section {
+    margin: 0 0px 0px 0px; 
+    padding-top: 30px;  
+}
+
+/* Row Styling - Space between cards */
+.summary-section .row {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    padding-left: 0px; 
+    padding-right: 0px; 
+}
+
+/* Column Styling - Ensure proper spacing and responsive layout */
+.summary-section .col {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: calc(25% -1px); 
+    min-width: 220px; 
+    max-width: 220px; 
+    padding: 0 0px; 
+}
+
+/* Card Styling */
+.summary-section .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 10px 19px rgba(0, 0, 0, 0.4); 
+    margin-bottom: 20px;  
+    width: 100%; 
+    max-width: 100%; 
+    padding: 0px; 
+}
+
+/* Card Hover Effect */
+.summary-section .card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Header Styling */
+.summary-section .card-header {
+    background-color: transparent;
+    color: hsl(13, 56%, 50%);  
+    font-weight: bold;
+    text-align: center; 
+    padding: 0px 10;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Card Body Styling */
+.summary-section .card-body {
+    padding: 20px;
+    text-align: center;  
+}
+
+/* Styling for the values in the Card Body */
+.summary-section .card-body h4 {
+    color: #fff;  
+    font-weight: bold;
+    font-size: 18px; 
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    .summary-section .row {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .summary-section .col {
+        width: 90%; 
+        margin-bottom: 15px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .summary-section .card-body h4 {
+        font-size: 18px; 
+    }
+
+    .summary-section .col {
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .summary-section .card-body h4 {
+        font-size: 16px; 
+    }
+
+    .summary-section .card {
+        margin-bottom: 10px; 
+    }
+
+    .summary-section .col {
+        width: 100%; 
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Bar Chart Styling */
+.bar-chart {
+    width: calc(100% - 60px);  
+    height: calc(65vh - 30px);  
+    margin: 30px;  
+    padding: 0;  
+    box-sizing: border-box;  
+    background-color: rgb(6, 6, 6);
+    opacity: 0.80;
+    color: hsl(13, 56%, 50%);  
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 10px 50px rgba(227, 90, 21, 0.4); 
+    
+   
+}
+
+/* Make the chart responsive and adjust for smaller screens */
+@media (max-width: 768px) {
+    .bar-chart {
+        height: calc(60vh - 30px);  
+        width: calc(100% - 60px);  
+        margin: 30px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .bar-chart {
+        height: calc(50vh - 30px);  
+        width: calc(100% - 60px);  
+        margin: 30px; 
+    }
+}
+
+
+/* Global layout styling */
+#insights-layout {
+    position: relative;
+    min-height: 100vh; 
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Insights Page Background */
+.graph-container {
+    padding-top: 30px; 
+    background-image: url('/assets/wildfire.webp'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    padding-left: 30px; 
+    padding-right: 10px; 
+    overflow: hidden; 
+    box-sizing: border-box; 
+}
+
+/* Row Styling for Graphs */
+.row {
+    display: flex;
+    justify-content: space-between; 
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+    gap: 20px; 
+}
+
+/* Left side - Pie Chart and Bubble Chart */
+.pie-graph, .bubble-graph {
+    background-color: #000; 
+    border-radius: 0px; 
+    opacity: 0.8;
+}
+
+.pie-graph {
+    height: 330px; 
+    width: 100%; 
+    max-width: 650px; 
+    margin-bottom: 15px; 
+}
+
+.bubble-graph {
+    height: 330px; 
+    width: 100%; 
+    max-width: 650px; 
+}
+
+/* Right side - Choropleth Map */
+.choropleth-map {
+    height: 100%; 
+    width: 100%; 
+    max-height: 675px; 
+    max-width: 752px; 
+    background-color: #030303; 
+    border-radius: 0px; 
+    opacity: 0.8;
+    padding-right: 0px; 
+}
+
+/* Ensure the left column occupies 30% width and the right column occupies 70% width */
+.row > div {
+    padding: 0;  
+}
+
+.row > div:first-child {
+    flex: 0 0 35%; 
+}
+
+.row > div:last-child {
+    flex: 0 0 65%; 
+    padding-right: 30px; 
+}
+
+/* Optional Styling to Ensure Layout Adjustments */
+* {
+    box-sizing: border-box;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .pie-graph, .bubble-graph {
+        width: 100%; 
+        max-width: none;
+        margin-bottom: 15px; 
+    }
+
+    .choropleth-map {
+        max-width: 100%; 
+        max-height: 450px; 
+    }
+
+    /* Stack columns vertically on smaller screens */
+    .row {
+        flex-direction: column; 
+    }
+}
+
+@media (max-width: 480px) {
+    .row {
+        flex-direction: column; 
+    }
+
+    .pie-graph, .bubble-graph {
+        max-width: 100%; 
+    }
+
+    .choropleth-map {
+        max-width: 100%; 
+        max-height: 400px; 
+    }
+}
+
+
+/* Overall Layout */
+.trends-background {
+    background-image: url('/assets/wildfire.webp');  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;  
+    padding-left: 10px;  
+    padding-right: 10px;  
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Container for the content */
+.trends-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Top Section (Yearly and Monthly Graphs Side by Side) */
+.trends-top-section {
+    display: flex;
+    justify-content: space-between;
+    height: 80vh;  
+    overflow: hidden;
+    opacity: 0.8;
+}
+
+/* Yearly Trends Graph (Left Side) */
+.yearly-trends {
+    flex: 0.3;  
+    height: 100vh;  
+    overflow: hidden;
+    opacity: 0.8;
+    padding-right: 13px; 
+}
+
+/* Monthly Trends Graph (Right Side) */
+.monthly-trends {
+    flex: 0.7;  
+    height: 100vh;  
+    overflow: hidden;
+    opacity: 0.8;
+}
+
+/* Bottom Section (Hourly Trends Graph) */
+.trends-bottom-section {
+    width: 100%;  
+    height: calc(40vh);  
+    padding-top: 0;
+    padding-bottom: 20px;  
+    overflow-y: auto;  
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    /* Adjust layout for tablet and medium screens */
+    .trends-top-section {
+        flex-direction: column;  
+        height: 50vh; 
+    }
+
+    .yearly-trends,
+    .monthly-trends {
+        flex: 1 1 100%;  
+        padding-right: 0;  
+    }
+
+    .trends-bottom-section {
+        height: calc(50vh); 
+    }
+}
+
+@media (max-width: 768px) {
+    /* Adjust layout for smaller screens like mobile */
+    .trends-top-section {
+        flex-direction: column;  
+        height: 40vh;  
+    }
+
+    .yearly-trends,
+    .monthly-trends {
+        flex: 1 1 100%;  
+        padding-right: 0;  
+    }
+
+    .trends-bottom-section {
+        height: calc(60vh);  
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust layout for very small screens */
+    .trends-top-section {
+        flex-direction: column;  
+        height: 35vh;  
+    }
+
+    .yearly-trends,
+    .monthly-trends {
+        flex: 1 1 100%;  
+        padding-right: 0;  
+    }
+
+    .trends-bottom-section {
+        height: calc(65vh);  
+    }
+}
+
+
+/* Main container for QGIS mapping */
+.qgis-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* QGIS iframe container */
+.qgis-iframe-container {
+    position: absolute;
+    top: 0;
+    left: 265px; 
+    width: calc(100vw - 265px);
+    height: 100%;
+    background-color: #f8f9fa;
+    overflow: hidden;
+    transition: left 0.3s ease, width 0.3s ease;
+}
+
+/* QGIS iframe */
+.qgis-iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+/* For tablets (max-width 768px) */
+@media (max-width: 768px) {
+    .qgis-iframe-container {
+        left: 0;
+        width: 100vw;
+    }
+}
+
+/* For mobile devices (max-width 480px) */
+@media (max-width: 480px) {
+    .qgis-container {
+        flex-direction: column;
+    }
+
+    .qgis-iframe-container {
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 50px);
+    }
+
+}
