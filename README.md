@@ -120,8 +120,6 @@ forest-fire-dashboard/
 
 ---
 
----
-
 ## 🔍 Code Explanation
 The code for data loading, cleaning, and merging is as follows:
 
