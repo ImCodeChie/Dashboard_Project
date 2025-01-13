@@ -37,8 +37,8 @@ df = df.dropna(axis=1, how='all')
 
 # --- 2. Load Shapefile ---
 
-shapefile_path = "C:/Users/Lutfi/Desktop/Forest Fire Project/Dashboard_Project/shapefile/Commune_BR_13.shp"
-# shapefile_path = "/shapefile/Commune_BR_13.shp"
+#shapefile_path = "C:/Users/Lutfi/Desktop/Forest Fire Project/Dashboard_Project/shapefile/Commune_BR_13.shp"
+shapefile_path = "/shapefile/Commune_BR_13.shp"
 gdf = gpd.read_file(shapefile_path)
 gdf.columns = gdf.columns.str.strip()
 gdf['INSEE_COM'] = gdf['INSEE_COM'].astype(str).str.strip()
@@ -130,8 +130,8 @@ merged_miss = merged[merged['Code INSEE'].isnull() | (merged['Code INSEE'] == ''
 # QGIS html file directory
 # -------------------------------
 # Set the path to the directory containing the HTML file
-html_file_directory = r'C:\Users\Lutfi\Desktop\Forest Fire Project\Dashboard_Project\qgis2web_2024_11_06-12_39_04_012529'
-# html_file_directory = r'qgis2web_2024_11_06-12_39_04_012529'
+# html_file_directory = r'C:\Users\Lutfi\Desktop\Forest Fire Project\Dashboard_Project\qgis2web_2024_11_06-12_39_04_012529'
+html_file_directory = r'qgis2web_2024_11_06-12_39_04_012529'
 
 
 # ----------------------------------------
