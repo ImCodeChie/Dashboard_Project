@@ -231,7 +231,7 @@ The app runs on port 8050, and you can access it locally in your browser.
 ---
 
 ## 🧑‍💻 Author and Acknowledgment
-This project was developed as part of the Geovisualization course at University of Aix-Marseille. The authors would like to acknowledge:
+This project was developed as part of the Geovisualization course individual project at the University of Aix-Marseille. The author would like to acknowledge:
 
 Course Instructors and Mentors: For providing guidance and insights during the development of this project.
 Data Source: Défense de la Forêt Contre les Incendies (DFCI) for providing the fire-related datasets used in this analysis.
