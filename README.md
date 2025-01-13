@@ -150,7 +150,7 @@ merged.to_file("geojson/all_communes.geojson", driver='GeoJSON')
 ```
 
 
-## Dash App Initialization
+### Dash App Initialization
 
 The app is initialized using Dash:
 ```python
@@ -163,7 +163,7 @@ The app is set up to serve HTML content from the html_file_directory via the @ap
 ```
 
 ```
-## Sidebar Components
+### Sidebar Components
 The sidebar contains interactive elements like dropdowns and navigation links:
 ```python
 sidebar = html.Div([ ... ])
@@ -174,7 +174,7 @@ A toggle button allows the sidebar to be hidden or shown.
 
 ```
 ```
-## Home Layout
+### Home Layout
 The home layout (home_layout) displays key statistics (e.g., max fires, total area burned) and a bar chart:
 ```python
 home_layout = html.Div([ ... ])
@@ -183,7 +183,7 @@ The statistics are dynamically updated using Dash callbacks. The bar chart visua
 The layout contains multiple cards that display the statistical information for easy visualization.
 ```
 ```
-## Insights Layout
+### Insights Layout
 The insights layout (insights_layout) contains a combination of charts, including:
 Pie Chart: Visualizes fire origin distribution.
 Bubble Chart: Displays fire occurrences by DFCI code with varying bubble sizes based on fire impact.
@@ -192,7 +192,7 @@ These visualizations are updated based on the user's selection of year and commu
 ```
 
 ```
-## Trends Layout
+### Trends Layout
 The trends layout (trends_layout) contains time-based trend charts:
 Monthly Trend Chart: Displays fire alerts by month.
 Hourly Trend Chart: Shows fire alerts by hour.
@@ -201,15 +201,16 @@ These charts are updated dynamically based on the selected year using Dash callb
 ```
 
 ```
-## QGIS Mapping Layout
+### QGIS Mapping Layout
 The QGIS layout (qgis_mapping_layout) embeds a QGIS-generated HTML map:
 ```python
 html.Iframe(src='/html/index.html', width="100%", height="100%")
+```
 This map displays the fire data geographically, allowing users to explore spatial patterns.
 ```
 
 ```
-## Callbacks
+### Callbacks
 Dash callbacks are used extensively to update the dashboard's visualizations and data based on user input (e.g., year and commune selections).
 The update_data_summaries function updates key statistics such as max fires, total area burned, etc.
 The update_bar_chart function updates the bar chart based on selected filters.
@@ -218,7 +219,7 @@ The update_trends function updates the trend charts (monthly, hourly, yearly) ba
 ```
 
 ```
-## Toggle Sidebar
+### Toggle Sidebar
 The sidebar can be toggled to show or hide using the button:
 ```python
 toggle_button = html.Button("▶️", id='toggle-sidebar', className='toggle-button')
@@ -227,7 +228,7 @@ A callback function (toggle_hidden_sidebar) manages the sidebar visibility when 
 ```
 
 ```
-## Main Layout
+### Main Layout
 The app layout includes the sidebar, content area, and navigation:
 ```python
 app.layout = html.Div([ ... ])
@@ -237,7 +238,7 @@ dcc.Location(id='url', refresh=False) tracks the current URL and updates the pag
 ```
 
 ```
-## Running the App
+### Running the App
 Finally, the app is run with:
 ```python
 app.run_server(debug=True, port=8050)
