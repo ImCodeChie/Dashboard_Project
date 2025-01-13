@@ -54,7 +54,7 @@ https://drive.google.com/file/d/1ORp9lyQBh5qhIiAkhT1Z_NaMdlO4Baqe/view?usp=drive
 ### Installation Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/forest-fire-dashboard.git
+   git clone https://github.com/repo/forest-fire-dashboard.git
    cd forest-fire-dashboard
    ```
 
