@@ -241,7 +241,6 @@ The CSS portion of the project has been developed to improve the app’s layout 
 
 Current Status: The app's code is ready, with functionality for data visualization and interaction fully implemented. CSS code is ready, and responsivity improvements are planned to be completed when there is enough time.
 
-## 📄 License
-This project is licensed under the [MIT License](LICENSE).
+
 
 ---
