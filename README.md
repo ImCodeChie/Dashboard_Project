@@ -149,8 +149,7 @@ merged = merged[merged.is_valid & ~merged.geometry.is_empty]
 merged.to_file("geojson/all_communes.geojson", driver='GeoJSON')
 ```
 
--------------------------------------------------------------------------------------------------------
-```
+
 # Dash App Initialization
 
 The app is initialized using Dash:
