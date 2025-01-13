@@ -9,8 +9,11 @@ Click on the link below to see a short video of the dashboard:
 ```markdown
 https://drive.google.com/file/d/1ORp9lyQBh5qhIiAkhT1Z_NaMdlO4Baqe/view?usp=drive_link
 
-
 ```
+
+![Alt text](https://github.com/ImCodeChie/Dashboard_Project/blob/6b8bfb85be8d7e60eb68ccb71df0be3e69d20fcf/Home.PNG)
+
+
 ---
 
 ## 📋 Features
