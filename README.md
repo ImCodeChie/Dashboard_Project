@@ -149,11 +149,21 @@ merged = merged[merged.is_valid & ~merged.geometry.is_empty]
 merged.to_file("geojson/all_communes.geojson", driver='GeoJSON')
 ```
 
----
+# 🧑‍💻 Authors and Acknowledgments
+This project was developed as part of the Geovisualization course at University of Aix-Marseille. The authors would like to acknowledge:
+
+Course Instructors and Mentors: For providing guidance and insights during the development of this project.
+Data Source: Défense de la Forêt Contre les Incendies (DFCI) for providing the fire-related datasets used in this analysis.
+The CSS portion of the project has been developed to improve the app’s layout and styling. However, the responsivity of the application needs further refinement. If time allows, this will be completed in the future to ensure the app is fully responsive and provides a seamless experience across different devices and screen sizes.
+
+Current Status:
+The app's code is ready, with functionality for data visualization and interaction fully implemented.
+CSS code is ready, responsivity improvements are planned to be completed when there is enough time.
 
 ## 📄 License
 This project is licensed under the [MIT License](LICENSE).
 
 ---
+
 
 Let me know if you need help with additional sections or edits!
