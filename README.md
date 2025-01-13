@@ -237,6 +237,8 @@ Finally, the app is run with:
 
 app.run_server(debug=True, port=8050)
 The app runs on port 8050, and you can access it locally in your browser.
+```
+
 
 
 
