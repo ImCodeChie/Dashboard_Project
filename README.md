@@ -237,11 +237,11 @@ This project was developed as part of the Geovisualization course at University 
 
 Course Instructors and Mentors: For providing guidance and insights during the development of this project.
 Data Source: Défense de la Forêt Contre les Incendies (DFCI) for providing the fire-related datasets used in this analysis.
+The QGIS mapping part was initially planned to be completed, with the aim of creating some insightful maps and conducting analyses. However, due to time limitations and unforeseen health conditions, which are out of the scope of this discussion, we were unable to implement it. We had planned to use QGIS mapping to create HTML outputs and provide more insightful data analysis in this regard, but this was not finalized.
+
 The CSS portion of the project has been developed to improve the app’s layout and styling. However, the responsivity of the application needs further refinement. If time allows, this will be completed in the future to ensure the app is fully responsive and provides a seamless experience across different devices and screen sizes.
 
-Current Status:
-The app's code is ready, with functionality for data visualization and interaction fully implemented.
-CSS code is ready, responsivity improvements are planned to be completed when there is enough time.
+Current Status: The app's code is ready, with functionality for data visualization and interaction fully implemented. CSS code is ready, and responsivity improvements are planned to be completed when there is enough time.
 
 ## 📄 License
 This project is licensed under the [MIT License](LICENSE).
