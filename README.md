@@ -15,6 +15,8 @@ https://drive.google.com/file/d/1ORp9lyQBh5qhIiAkhT1Z_NaMdlO4Baqe/view?usp=drive
 
 ![Alt text](https://github.com/ImCodeChie/Dashboard_Project/blob/b3e98daf34235e35529cbc98bb3fef2c1585d899/Insights.PNG)
 
+![Alt text](https://github.com/ImCodeChie/Dashboard_Project/blob/9779f2a798df00a9a5c07f2d1455a70b9d61041e/QGIS.PNG)
+
 
 ---
 
